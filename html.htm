@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Transition - Easy Tutorials YouTube Channel</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <div class="container">
+        
+        <div class="imb-box">
+            <img src="https://static.javatpoint.com/best/images/best-cars-in-the-world8.png" width="100%">
+
+            <div class="imb-wrap">
+                <img src="https://img.freepik.com/premium-photo/red-lamborghini-with-black-orange-paint_575980-439.jpg" id="Img">
+                <!-- <img src="background chang image\car2.png" id="Img"> -->
+                <!-- <img src="https://static.javatpoint.com/best/images/best-cars-in-the-world8.png" id="Img">12 -->
+
+            </div>
+
+            <span id="line">
+                <img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-back-512.png"   class="arrow">
+            </span>
+        </div>
+    </div>
+    <script>
+          var IMbBox = document.querySelector(".imb-box");
+          var IMbWrap = document.querySelector(".imb-wrap");
+          var Img = document.getElementById("Img");
+          var line = document.getElementById("line");
+          Img.style.width =  IMbBox.offsetWidth + "px";
+
+          var leftSpace = IMbBox.offsetLeft;
+
+          IMbBox.onmousemove = function(e){
+            var boxWidth = (e.pageX - leftSpace) + "px";
+            IMbWrap.style.width = boxWidth;
+            line.style.left = boxWidth;
+          }
+    </script>
+</body>
+</html>
